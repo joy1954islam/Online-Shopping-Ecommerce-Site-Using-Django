@@ -38,16 +38,19 @@
                           <ul class="dropdown-menu">
 
                               <li>
-                                  <a class="navbar-brand" href="{% url 'shop:product_list' %}" >My Oder</a>
+                                  <a class="navbar-brand" href="{% url 'orders:order_view' %}" >My Oder</a>
                               </li>
                               <li>
                                   <a class="navbar-brand" href="#">logout</a>
                               </li>
 
                               {% else %}
-                              <li class="divider"></li>
-                              <li><a href="#" style="color: #ffffff">Sign in</a></li>
-                              <li><a href="#" style="color: #ffffff">Sign up</a></li>
+
+
+                                  <a class="navbar-brand" href="#" style="color: #ffffff">Sign in</a>
+
+                                  <a class="navbar-brand" href="#" style="color: #ffffff">Sign up</a>
+
                           </ul>
                     {% endif %}
             </div>

@@ -1,12 +1,15 @@
 from django.db import models
 from shop.models import Product
+from django.conf import settings
 
 
 class Order(models.Model):
+    username = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True, blank=True)
     first_name = models.CharField(max_length=60)
     last_name = models.CharField(max_length=60)
     email = models.EmailField()
     address = models.CharField(max_length=150)
+    phone = models.CharField(max_length=15)
     postal_code = models.CharField(max_length=30)
     city = models.CharField(max_length=100)
     created = models.DateTimeField(auto_now_add=True)
