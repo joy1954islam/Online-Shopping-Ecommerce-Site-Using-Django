@@ -41,15 +41,21 @@
                                   <a class="navbar-brand" href="{% url 'orders:order_view' %}" >My Oder</a>
                               </li>
                               <li>
-                                  <a class="navbar-brand" href="#">logout</a>
+                                  <a class="navbar-brand" href="{% url 'shop:profile' %}" >Profile</a>
+                              </li>
+                              <li>
+                                  <a class="navbar-brand" href="{% url 'shop:change_profile' %}" >Change Profile</a>
+                              </li>
+                              <li>
+                                  <a class="navbar-brand" href="{% url 'shop:logout' %}">logout</a>
                               </li>
 
                               {% else %}
 
 
-                                  <a class="navbar-brand" href="#" style="color: #ffffff">Sign in</a>
+                                  <a class="navbar-brand" href="{% url 'shop:login' %}" style="color: #ffffff">Sign in</a>
 
-                                  <a class="navbar-brand" href="#" style="color: #ffffff">Sign up</a>
+                                  <a class="navbar-brand" href="{% url 'shop:signup' %}" style="color: #ffffff">Sign up</a>
 
                           </ul>
                     {% endif %}

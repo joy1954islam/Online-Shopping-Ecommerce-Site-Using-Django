@@ -94,3 +94,12 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'shop/media')
 CART_SESSION_ID = 'cart'
+
+
+LOGIN_URL = 'login'
+
+LOGOUT_URL = 'logout'
+
+LOGIN_REDIRECT_URL = 'product_list'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
